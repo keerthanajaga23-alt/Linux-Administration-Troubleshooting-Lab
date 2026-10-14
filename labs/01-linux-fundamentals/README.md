@@ -2,7 +2,7 @@
 
 ## Objective
 
-Practise essential Linux commands for navigating directories, creating files, reading file contents, copying files, renaming files and removing files.
+Practice essential Linux commands for navigating directories, creating files, reading file contents, copying files, renaming files and removing files.
 
 ## Environment
 
