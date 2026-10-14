@@ -31,8 +31,6 @@ getent group itlab
 * `groupadd` creates a Linux group.
 * `getent group` checks the group database for the specified group.
 
-If the group already exists, do not create it again. Use the verification command instead.
-
 ## 4. Create Linux Users
 
 Create a user with a home directory:
@@ -53,7 +51,7 @@ Add Alice to the `itlab` supplementary group:
 sudo usermod -aG itlab alice
 ```
 
-Repeat for Bob and Charlie if the accounts do not already exist.
+Repeat for Bob and Charlie
 
 ```bash
 sudo useradd -m bob
@@ -67,8 +65,6 @@ sudo passwd charlie
 ```
 
 For this exercise, Charlie is initially kept outside the `itlab` group so that access restrictions can be tested.
-
-**Important:** Check whether users already exist before creating them. Do not recreate existing accounts or reset passwords unnecessarily.
 
 ## 5. Verify User and Group Membership
 
@@ -165,7 +161,7 @@ Check the result:
 ls -l /opt/itlab
 ```
 
-If Bob exists and belongs to `itlab`, test his directory access:
+test bob directory access:
 
 ```bash
 sudo -u bob ls -la /opt/itlab
@@ -229,7 +225,7 @@ Permission `660` means:
 
 **Important:** A user belonging to a group does not automatically have access to every file owned by that group. The file permissions must also grant the required access.
 
-## 9. Practise File Ownership
+## 9. Practice File Ownership
 
 Change the file owner to Alice:
 
@@ -347,7 +343,7 @@ Common numeric values:
 
 ## 13. Learning Outcomes
 
-This lab practises:
+This lab practices:
 
 * Linux user and group administration.
 * Supplementary group membership.
