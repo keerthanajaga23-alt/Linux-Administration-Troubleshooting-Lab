@@ -81,21 +81,6 @@ ls -l
 | `mv`    | Move or rename a file         |
 | `rm`    | Remove a file                 |
 
-## Results
-
-Complete this section after running the commands:
-
-* [ ] Created the practice directory.
-* [ ] Created and listed `notes.txt`.
-* [ ] Wrote text into and read `notes.txt`.
-* [ ] Copied and renamed the practice file.
-* [ ] Removed the practice copy.
-* [ ] Verified the results using `ls -l`.
-
-## Evidence
-
-Added a screenshot of the Ubuntu terminal showing the commands and their results.
-
 ## Learning Outcome
 
 I practiced basic Linux filesystem navigation and file operations using Ubuntu on WSL2. These commands provide a foundation for Linux administration and troubleshooting.
