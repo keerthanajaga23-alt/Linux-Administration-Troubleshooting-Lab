@@ -122,7 +122,7 @@ ps -p <PID> -o pid,ppid,stat,cmd
 
 Replace `<PID>` with the actual process ID. Do not type the angle brackets.
 
-**Purpose:** Practise identifying a process before managing it.
+**Purpose:** Practice identifying a process before managing it.
 
 ## 8. Stop the Test Process
 
@@ -227,19 +227,7 @@ When investigating a performance issue:
 | `ps -p PID`                   | Inspect a specific process                  |
 | `kill PID`                    | Send a signal to a process                  |
 
-## 13. Results and Verification Checklist
-
-*  Listed running processes with `ps aux`.
-*  Sorted processes by CPU usage.
-*  Sorted processes by memory usage.
-*  Monitored processes using `top`.
-*  Checked memory statistics using `free -h`.
-*  Created and identified a background test process.
-*  Stopped the test process and verified its termination.
-*  Practised a high-CPU troubleshooting workflow.
-*  Practised a high-memory troubleshooting workflow.
-
-## 15. Learning Outcomes
+## 13 Learning Outcomes
 
 This lab provides practice in:
 
