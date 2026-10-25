@@ -2,7 +2,7 @@
 
 ## 1. Objective
 
-The objective of this lab is to understand Linux services and practise checking service status, starting and stopping services, enabling services at boot, validating configurations, checking listening ports, and investigating service failures using logs.
+The objective of this lab is to understand Linux services and practiCe checking service status, starting and stopping services, enabling services at boot, validating configurations, checking listening ports, and investigating service failures using logs.
 
 ## 2. Lab Environment
 
@@ -436,7 +436,7 @@ This control-channel problem remains a separate unresolved item. Do not describe
 
 Replace `SERVICE` with the actual service name, such as `nginx`, `ssh`, or `named`.
 
-## 20. Learning Outcomes
+## 18. Learning Outcomes
 
 This lab practices:
 
