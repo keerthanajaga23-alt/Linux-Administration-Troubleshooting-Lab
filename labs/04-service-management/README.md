@@ -309,7 +309,26 @@ sudo journalctl -p err -n 30 --no-pager
 
 Investigate timestamps and messages related to the incident. A warning or old error may not be the reason the service is currently failing.
 
-## 14. Troubleshooting Scenario: Service Is Not Running
+## 14 Troubleshooting: BIND9 Loopback DNS Queries
+
+**Problem:** DNS queries to `127.0.0.1` failed with connection-refused or timeout errors, although queries to the WSL IPv4 address succeeded.
+
+**Investigation:**
+- Confirmed that the BIND9 service was active.
+- Inspected DNS listeners with `ss`.
+- Reviewed BIND9 logs with `journalctl`.
+- Checked the route to `127.0.0.1` using `ip route get`.
+- Found that loopback traffic was routed through `loopback0` instead of the expected local loopback route.
+
+**Workaround:** Added temporary routing-policy rules to prioritise local routing for loopback destinations and flushed the route cache.
+
+**Verification:** Record the actual results of the UDP and TCP DNS tests after applying the workaround.
+
+**Limitation:** The routing-policy rules may not persist after WSL restarts. This workaround should not be described as a permanent fix without further investigation.
+
+**Separate issue:** The RNDC control-channel timeout on port 953 remains unresolved.
+
+## 15. Troubleshooting Scenario: Service Is Not Running
 
 ### Scenario
 
@@ -360,7 +379,7 @@ curl -I http://localhost
 
 Do not automatically restart a service before collecting useful diagnostic information.
 
-## 15. Troubleshooting Scenario: Port Is Not Listening
+## 16. Troubleshooting Scenario: Port Is Not Listening
 
 ### Scenario
 
@@ -394,7 +413,7 @@ sudo journalctl -u nginx -n 50 --no-pager
 
 Investigate whether the service is configured to listen on the expected address and port. Also check for port conflicts, which may prevent a service from binding to its configured port.
 
-## 16. Troubleshooting Scenario: Service Fails to Reload
+## 17. Troubleshooting Scenario: Service Fails to Reload
 
 ### Scenario
 
@@ -413,7 +432,7 @@ For BIND9, `systemctl reload named` failed in this WSL lab because the configure
 
 This control-channel problem remains a separate unresolved item. Do not describe the reload problem as fixed.
 
-## 17. Key Commands Reference
+## 18 Key commands Reference
 
 | Command                        | Purpose                             |
 | ------------------------------ | ----------------------------------- |
