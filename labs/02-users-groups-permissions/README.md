@@ -2,7 +2,7 @@
 
 ## 1. Objective
 
-The objective of this lab is to practise Linux user and group administration, manage file ownership and permissions, configure a shared directory, and troubleshoot access-denied problems.
+The objective of this lab is to practice Linux user and group administration, manage file ownership and permissions, configure a shared directory, and troubleshoot access-denied problems.
 
 ## 2. Lab Environment
 
