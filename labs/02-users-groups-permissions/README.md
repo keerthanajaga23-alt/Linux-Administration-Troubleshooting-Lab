@@ -175,7 +175,7 @@ sudo -u bob ls -la /opt/itlab
 
 The commands test whether a user can access the shared directory under the configured permissions.
 
-## 8. Practise File Permissions
+## 8. Practice File Permissions
 
 Create a test file:
 
