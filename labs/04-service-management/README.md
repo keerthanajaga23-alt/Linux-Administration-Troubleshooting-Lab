@@ -2,7 +2,7 @@
 
 ## 1. Objective
 
-The objective of this lab is to understand Linux services and practiCe checking service status, starting and stopping services, enabling services at boot, validating configurations, checking listening ports, and investigating service failures using logs.
+The objective of this lab is to understand Linux services and practice checking service status, starting and stopping services, enabling services at boot, validating configurations, checking listening ports, and investigating service failures using logs.
 
 ## 2. Lab Environment
 
@@ -122,8 +122,6 @@ sudo systemctl status nginx --no-pager
 
 **Important:** Stopping a service interrupts the functionality it provides. Do not stop SSH on a remote system without an alternative access method, and do not stop services that other applications depend on without understanding the impact.
 
-For this lab, avoid stopping services that you rely on.
-
 ## 8. Restart a Service
 
 Restart Nginx:
@@ -157,7 +155,6 @@ First, validate the configuration. Reload only if the validation succeeds.
 
 A reload is not supported by every service. If a reload fails, check the service documentation, unit definition, configuration, and logs rather than repeatedly retrying the command.
 
-For BIND9, the `named` service in this lab had an unresolved RNDC reload issue. Do not mark BIND reload as successful unless it is verified after the issue has been investigated.
 
 ## 10. Enable a Service at Boot
 
