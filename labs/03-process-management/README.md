@@ -114,13 +114,13 @@ ps aux | grep '[s]leep 300'
 
 Record its PID from the output.
 
-You can also inspect it using:
+I inspect it using:
 
 ```bash
 ps -p <PID> -o pid,ppid,stat,cmd
 ```
 
-Replace `<PID>` with the actual process ID. Do not type the angle brackets.
+Replace `<PID>` with the actual process ID.
 
 **Purpose:** Practice identifying a process before managing it.
 
